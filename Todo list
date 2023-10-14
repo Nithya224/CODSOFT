@@ -1,0 +1,44 @@
+def add(task):
+  todo_list.append(task)
+
+def remove(task):
+  todo_list.remove(task)
+
+def mark_complete(task):
+  todo_list.remove(task)
+  completed_tasks.append(task)
+
+def printlist():
+  print("To-do list:")
+  for task in todo_list:
+    print(task)
+
+  print("\nCompleted tasks:")
+  for task in completed_tasks:
+    print(task)
+
+if __name__ == "__main__":
+  todo_list = []
+  completed_tasks = []
+
+  # Add some initial tasks
+  add("Buy books")
+  add("Finish homework")
+
+  # Start a loop to prompt the user for input
+  while True:
+    command = input("> ")
+
+    if command == "add":
+      task = input("Enter a new task: ")
+      add(task)
+    elif command == "remove":
+      task = input("Enter the task to remove: ")
+      remove(task)
+    elif command == "complete":
+      task = input("Enter the task to mark as complete: ")
+      markcomplete(task)
+    elif command == "print":
+      printlist()
+    elif command == "quit":
+      break
