@@ -18,12 +18,8 @@ def printlist():
     print(task)
 
 if __name__ == "__main__":
-  todo_list = []
+  todo_list = ["Buy books","Finish homework"]
   completed_tasks = []
-
-  # Add some initial tasks
-  add("Buy books")
-  add("Finish homework")
 
   # Start a loop to prompt the user for input
   while True:
